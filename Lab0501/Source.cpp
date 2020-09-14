@@ -32,17 +32,17 @@ int main()
 	do {
 		if (_kbhit()) {
 			ch = _getch();
-			if (ch == 'a' && x > 0) {
+			if (ch == 'a') {
 				do {
 					delete_ship(x, y); draw_ship(--x, y); Sleep(100);
 					if (_kbhit()) { ch = _getch(); }
-				} while (ch != 's');
+				} while (ch != 's' && x > 0);
 			}
-			if (ch == 'd' && x < 80) {
+			if (ch == 'd') {
 				do {
 					delete_ship(x, y); draw_ship(++x, y); Sleep(100);
 					if (_kbhit()) { ch = _getch(); }
-				} while (ch != 's');
+				} while (ch != 's' && x < 80);
 			}
 			fflush(stdin);
 		}
