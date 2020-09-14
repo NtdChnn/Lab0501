@@ -23,7 +23,6 @@ void setcursor(bool visible)
 	lpCursor.dwSize = 20;
 	SetConsoleCursorInfo(console, &lpCursor);
 }
-
 int main()
 {
 	setcursor(0);
